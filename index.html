@@ -38,7 +38,7 @@
           <img src="asdfgh.jpeg" alt="Дмитрий и Александра">
         </div>
         <div class="polaroid__footer">
-          <span class="polaroid__caption">25.07.2026</span>
+          <span class="polaroid__caption">24.07.2026</span>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
     <h2 class="section-title">Информация</h2>
     <div class="date-block">
       <p class="date-block__phrase">Давайте создадим вместе незабываемые воспоминания</p>
-      <p class="date-block__date-script">25 июля 2026</p>
+      <p class="date-block__date-script">24 июля 2026</p>
       <div class="date-block__calendar">
         <div class="date-block__calendar-title">Июль 2026</div>
         <div class="date-block__calendar-weekdays">
@@ -108,8 +108,8 @@
           <span class="date-block__calendar-day">21</span>
           <span class="date-block__calendar-day">22</span>
           <span class="date-block__calendar-day">23</span>
-          <span class="date-block__calendar-day">24</span>
-          <span class="date-block__calendar-day date-block__calendar-day--wedding"><span>25</span></span>
+          <span class="date-block__calendar-day date-block__calendar-day--wedding"><span>24</span></span>
+          <span class="date-block__calendar-day">25</span>
           <span class="date-block__calendar-day">26</span>
           <span class="date-block__calendar-day">27</span>
           <span class="date-block__calendar-day">28</span>
@@ -121,15 +121,22 @@
     </div>
     <div class="place-card">
       <div class="place-card__info">
-        <div class="detail-row">
-          <span class="detail-label">Место</span>
-          Молдова, г. Чадыр-Лунга
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Дресс-код</span>
-          Вечерний наряд
-        </div>
+  <div class="detail-row">
+    <span class="detail-label">Место</span>
+    Молдова, г. Чадыр-Лунга
+  </div>
+  <div class="detail-row dress-code-row">
+    <span class="detail-label">Дресс-код</span>
+    <div class="dress-code-content">
+      <span class="dress-code-label">Вечерний наряд</span>
+      <div class="color-palette">
+        <div class="color-swatch" style="background-color: #6B4E3E;" title="Pantone 19-1224 TPX - Truffle"></div>
+        <div class="color-swatch" style="background-color: #8A7F6D;" title="Pantone 17-1115 TPX - Walnut"></div>
+        <div class="color-swatch" style="background-color: #2C423F;" title="Pantone 19-4916 TPX - Deep Teal"></div>
       </div>
+    </div>
+  </div>
+</div>
       <div class="place-card__map">
         <iframe src="https://www.google.com/maps?q=Ceadir-Lunga%2C+Moldova&output=embed&maptype=roadmap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Молдова, г. Чадыр-Лунга"></iframe>
       </div>
@@ -159,35 +166,40 @@
 
   <section class="section rsvp-section" data-scroll>
     <h2 class="section-title">Подтвердите ваше присутствие</h2>
-    <p class="form-deadline">Мы будем признательны, если вы сможете подтвердить ваше присутствие до 15 мая.</p>
+    <p class="form-deadline">Мы будем признательны, если вы сможете подтвердить ваше присутствие до 15 июня.</p>
     <p class="rsvp-text" style="margin-bottom: 1.5rem;">
       Будем очень ждать вас на нашем празднике!
     </p>
-    <form class="rsvp-form" id="rsvp-form" action="#" method="post">
-      <div class="form-group">
-        <label for="fio" class="form-label">Ваши имя и фамилия</label>
-        <input type="text" id="fio" name="fio" placeholder="Лариса Гузеева" required>
-        <p class="form-hint">Если вы будете с парой или семьёй, внесите, пожалуйста, все имена через запятую</p>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Вы придёте?</label>
-        <div class="form-options">
-          <label class="form-option">
-            <input type="radio" name="presence" value="yes" required>
-            С радостью буду
-          </label>
-          <label class="form-option">
-            <input type="radio" name="presence" value="no">
-            К сожалению, не смогу
-          </label>
-          <label class="form-option">
-            <input type="radio" name="presence" value="maybe">
-            Пока не знаю
-          </label>
-        </div>
-      </div>
-      <button type="submit" class="form-submit">Отправить</button>
-    </form>
+   <form class="rsvp-form" id="rsvp-form" action="https://formspree.io/f/xbdzqblz" method="POST">
+
+<input type="hidden" name="_next" value="https://DimaSasha.github.io/wedding-site/thanks.html">
+
+  <div class="form-group">
+    <label for="fio" class="form-label">Ваши имя и фамилия</label>
+    <input type="text" id="fio" name="fio" placeholder="Лариса Гузеева" required>
+    <p class="form-hint">Если вы будете с парой или семьёй, внесите, пожалуйста, все имена через запятую</p>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Вы придёте?</label>
+    <div class="form-options">
+      <label class="form-option">
+        <input type="radio" name="presence" value="yes" required>
+        С радостью буду
+      </label>
+      <label class="form-option">
+        <input type="radio" name="presence" value="no">
+        К сожалению, не смогу
+      </label>
+      <label class="form-option">
+        <input type="radio" name="presence" value="maybe">
+        Пока не знаю
+      </label>
+    </div>
+  </div>
+
+  <button type="submit" class="form-submit">Отправить</button>
+</form>
   </section>
 
   <div class="section-divider" data-scroll><span>✦</span></div>
