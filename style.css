@@ -19,6 +19,9 @@ html {
 }
 
 body {
+   
+  transition: opacity 0.4s ease;
+
   font-family: 'Montserrat', sans-serif;
   background: var(--cream);
   color: var(--charcoal);
@@ -976,4 +979,53 @@ body::before {
   color: var(--soft-brown);
   margin-top: 0.5rem;
   letter-spacing: 0.05em;
+}
+/* Дресс-код с цветами Pantone */
+.dress-code-row {
+  display: block !important;
+}
+
+.dress-code-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.dress-code-label {
+  font-weight: 500;
+  color: #2c1810;
+  font-size: 1rem;
+}
+
+.color-palette {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.color-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 2px solid white;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .color-swatch {
+    width: 28px;
+    height: 28px;
+  }
+  .dress-code-content {
+    gap: 0.5rem;
+  }
 }
